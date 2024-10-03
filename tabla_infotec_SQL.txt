@@ -1,0 +1,70 @@
+CREATE TABLE cliente (
+
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	nombre VARCHAR(100),
+	dni VARCHAR(50),
+	contacto VARCHAR(15),
+	num_servicio INT,
+	tipo_servicio VARCHAR(50),
+	app_creation_date VARCHAR(50),
+  app_created_by varchar(50),
+  app_last_update_by VARCHAR(50),
+  app_las_update_date VARCHAR(50),
+  sys_time_stamp VARCHAR(50)
+);
+
+
+CREATE TABLE mantenimiento (
+	id INT PRIMARY KEY,
+	equipo VARCHAR(100),
+	AppCreationDate VARCHAR(30),
+	app_created_by VARCHAR(50),
+  app_last_update_by VARCHAR(50),
+  app_las_update_date VARCHAR(50),
+  sys_time_stamp VARCHAR(50),
+	estado_actual VARCHAR(500),
+	estado_final VARCHAR(500),
+	empleados_id INT
+);
+
+CREATE TABLE caja(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	app_creation_date VARCHAR(50),
+	descrip_reparacion VARCHAR(500),
+	descrip_costo VARCHAR(40),
+	costo_total VARCHAR(40),
+	id_mantenimiento int
+	
+);
+
+CREATE TABLE empleado(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre_empleado VARCHAR (50),
+  dni VARCHAR(50),
+  telefono VARCHAR(50),
+  direccion VARCHAR(50),
+  app_creation_date VARCHAR(50),
+  app_created_by varchar(50),
+  app_last_update_by VARCHAR(50),
+  app_las_update_date VARCHAR(50)
+);
+
+
+CREATE TABLE poveedores(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre_proveedor VARCHAR (50),
+  ruc VARCHAR (50),
+  numero  VARCHAR (50),
+  detalle_producto VARCHAR (50),
+  referencia_comercial VARCHAR (50),
+  datos_bancarios VARCHAR (50),
+  egresos_productos  VARCHAR (50),
+  info_fiscal VARCHAR (50),
+  app_creation_date VARCHAR(50),
+  app_created_by varchar(50),
+  app_last_update_by VARCHAR(50),
+  app_las_update_date VARCHAR(50)
+
+);
+
+
